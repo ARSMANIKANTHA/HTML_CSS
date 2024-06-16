@@ -1,0 +1,195 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url("./formbackground.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    /* width: 100vw; */
+    height: auto;
+
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+::selection{
+    background: rgba(5, 53, 5, 0.625);
+    color: rgb(255, 255, 255);
+}
+
+heading{
+    letter-spacing: 0.2rem;
+    color: rgb(96, 15, 15);
+}
+
+header{
+    padding: 0.4rem;
+    height: 30%;
+    width: 100%;
+    color: white;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    position: sticky;
+    top:0;
+    background-color: purple;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+}
+main{
+    min-width: 20rem;
+    width:60%;
+    height: 90%;
+    margin: 1rem;
+    flex-grow: 1;
+    border: 1px solid blue;
+    background-color:white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.outline{
+    width:95%;
+    height: auto;
+    margin: 0.1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.outline .description{
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    h2{
+        letter-spacing: 0.1rem;
+        margin: 1rem 0;
+        width: fit-content;
+        text-align:center;
+        border:white;
+        /* border-bottom: 0.2rem solid rgb(60, 34, 186); */
+    }
+    ol{
+        margin-bottom: 1rem;
+    }
+     li{
+        list-style-position: inside;
+     }
+
+     h2:hover{
+        border-bottom: 0.2rem solid purple;
+        transition: 100ms;
+     }
+}
+
+.formdiv{
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.formdiv div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.formfields{
+    color: rgb(51, 8, 51);
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+input,select{
+    border: 0.001rem solid rgb(174, 148, 148);
+    margin: 0.3rem 0 1rem 0;
+    height: 2.2rem;
+    padding: 0.3rem;
+    font-size: 1rem;
+    background-color: rgb(243, 245, 246);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 0.18rem;
+}
+
+input:hover,select:focus{
+    background-color: rgb(237, 237, 233);
+}
+
+input[type="submit"]{
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 0.3rem;
+    cursor:pointer;
+    letter-spacing: 0.5rem;
+}
+
+
+.formfields option{
+    outline: none;
+    background-color: rgb(211, 174, 211);
+    color: rgb(0, 0, 0);
+}
+
+input:focus{
+    outline: none;
+    border-bottom: 0.2rem solid rgba(49, 97, 49, 0.638);
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(61, 8, 61);
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.3rem;
+
+    grid: grid;
+    place-content: center;
+}
+
+.footerlinks{
+    font-size: 1rem;
+    width: 40%;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    flex-flow: row wrap;
+}
+
+.footerlinks a{
+    margin-bottom: 0.3rem;
+    flex-grow: 1;
+    text-decoration: none;
+    color: white;
+}
+.footerlinks a:hover{
+    text-decoration-line: underline;
+}
+
+@media (prefers-color-scheme:light){
+    body{
+        background: none;
+        background-color: black;
+    }
+
+    main,.outline,.formfields{
+        color: white;
+        background-color: rgb(49, 22, 22);
+    }
+
+    ::selection{
+        background-color: rgb(0, 0, 0);
+    }
+}

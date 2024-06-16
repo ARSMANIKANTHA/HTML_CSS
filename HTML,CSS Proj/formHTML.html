@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Practice</title>
+    <link rel="stylesheet" href="formCSS.css">
+</head>
+<body>
+    <header>
+        <div class="companytitle">
+            A R S TECH UNIVERSE
+        </div>
+        
+    </header>
+    <h2 class="heading">Apply to Java Developer</h2>
+    <main>
+        <section class="outline">
+            
+        <section class="description">
+            <h2>Job Description</h2>
+            <p class="blur">The following job description may or may not be similar to how your organization currently writes job descriptions. The purpose of this example is to demonstrate how you can weave skills into the qualifications section of the job description without having to make a separate list of skills. By tying each job duty to the skills required to carry it out, you give candidates the opportunity to self-assess their current skillset and imagine themselves in the role. </p>
+            <h2>Preferred Qualifications</h2>
+            <ol>
+                <li>To manage a time of five customer service representatives, you’ll need skills in leadership and strong coaching skills.</li>
+                <li>A new customer loyalty program is a key initiative for our business. You’ll rely on project management and program design skills to design and implement this core program.</li>
+                <li>Ability to collaborate cross-functionally is essential to this role as you will be communicating with stakeholders across the marketing and services teams to execute the customer loyalty program and communicate results to business teams on an ongoing basis.</li>
+                <li>Your skills in survey development and analysis with help you contribute to our team’s continuous improvement.
+                </li>
+                <li>Your skills in customer interaction, problem-solving, negotiation, and communication will help us deliver unparalleled service that keeps our customers coming back.
+                </li>
+                <li>You are a fast learner with new systems and have demonstrable skills with word processing software, spreadsheets, and presentations.</li>
+            </ol>
+        </section>
+            <!-- <h2>FILL YOUR DETAILS</h2> -->
+            <form action="/google.com" method="post" class="formdiv">
+                <div class="formfields">
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="firstName" required placeholder="First Name">
+                </div>
+                <div class="formfields">
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" id="lastName" required placeholder="Last Name">
+                </div>
+                <div class="formfields">
+                    <label for="dob">Date-Of-Birth*</label>
+                    
+                    <input type="date" name="dob" min="2000-01-01" max="2004-01-01" required>
+                </div>
+                <div class="formfields">
+                    <label for="gender">Gender*</label>
+                    <select name="gender" id="gender" >
+                        <option value="Choose Gender" hidden>Choose Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Prefer Not to Say">Prefer Not to Say</option>
+                    </select>
+                </div>
+                <div class="formfields">
+                    <label for="collegeName">College Name*</label>
+                    <input type="text" id="collegeName" required placeholder="College Name">
+                </div>
+                <div class="formfields">
+                    <label for="mobile">Mobile Number*</label>
+                    <input type="tel" id="mobile" required placeholder="## ### #### ###" pattern="^[0-9]*{10}">
+                </div>
+                <div class="formfields">
+                    <label for="experience">Years of experience*</label>
+                    <select name="experience" id="experience" >
+                        <option value="Choose experience" hidden>Choose Experience</option>
+                        <option value="Fresher">Fresher</option>
+                        <option value="btw1to2">0-1 Years</option>
+                        <option value="btw2to3">2-3 Years</option>
+                        <option value="morethan3">>=3 Years</option>
+                    </select>
+                </div>
+                <div class="formfields">
+                    <label for="resumecv">Resume/CV*</label>
+                    <input type="file" name="resume" id="resumecv" multiple>
+                </div>
+                <div class="formfields">
+                    <input type="submit" name="submit" value="APPLY">
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footerlinks">
+            <a href="#">Customers</a>
+            <a href="#">Careers</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Parent Company</a>
+            <a href="#">Customers</a>
+            <a href="#">Careers</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Parent Company</a>
+        </div>
+    </footer>
+</body>
+</html>
