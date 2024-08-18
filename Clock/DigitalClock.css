@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(12, 5, 61);
+    height: 100vh;
+    padding: 1rem;
+}
+header{
+    height: 10%;
+    display: grid;
+    place-content: center;
+    font-size: 2rem;
+    font-family: monospace;
+    color: white;
+    box-shadow: 0.1px 0.1px 1px 1px rgba(73, 73, 118, 0.855);
+}
+main{
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clockouter{
+    height: 80%;
+    width:60%;
+    background-color: rgb(155, 155, 145);
+    border-radius: 0.1rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.zone{
+    min-width: 30px;
+    height: 15%;
+    width: 8%;
+    background-color: rgb(83, 65, 32);
+    border-radius: 0.1rem;
+    font-size: 1.6em;
+    color: white;
+    font-family: 'Archivo Black';
+    display: grid;
+    place-content: center;
+    position: relative;
+    bottom: -30%;
+}
+
+.hours,.mins,.seconds{
+    height: 80%;
+    width: 30%;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.hr,.mn,.sec{
+    height: 80%;
+    background-color: rgb(71, 48, 71);
+    width: 100%;
+    display: grid;
+    place-content: center;
+    font-size: 3rem;
+    color: white;
+    font-family: 'Archivo Black';
+    text-shadow: 1px 1px 4px rgb(187, 192, 110);
+}
+
+.name{
+    height: 20%;
+    width: 100%;
+    background-color: rgb(15, 22, 83);
+    font-size: 2rem;
+    color: white;
+    font-family: monospace;
+    font-family: 'Archivo Black';
+    display: grid;
+    place-content: center;
+}
+
+@media only screen and (max-width:1200px) {
+    .name,.zone{
+        font-size: 1.5rem;
+        transform: font-size;
+        transition-duration: 500ms;
+    }
+    .hr,.mn,.sec{
+        font-size: 2.5rem;
+        transform: font-size;
+        transition-duration: 500ms;
+    }
+
+}
+@media only screen and (max-width:900px) {
+    .name,.zone{
+        font-size: 1rem;
+        transform: font-size;
+        transition-duration: 500ms;
+    }
+    .hr,.mn,.sec{
+        font-size: 1.5rem;
+        transform: font-size;
+        transition-duration: 500ms;
+    }
+
+}
+@media only screen and (max-width:650px) {
+    .name,.zone{
+        font-size: 0.8rem;
+        transform: font-size;
+        transition-duration: 500ms;
+    }
+    .hr,.mn,.sec{
+        font-size: 1.2rem;
+        transform: font-size;
+        transition-duration: 500ms;
+    }
+
+}

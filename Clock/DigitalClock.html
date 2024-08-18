@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="DigitalClock.css">
+</head>
+<body>
+    <header>
+        DIGITAL CLOCK
+    </header>
+    <main>
+        <div class="clockouter">
+            <div class="hours">
+                <div class="hr"></div>
+                <div class="name">HOURS</div>
+            </div>
+            <div class="mins">
+                <div class="mn"></div>
+                <div class="name">MINUTES</div>
+            </div>
+            <div class="seconds">
+                <div class="sec"></div>
+                <div class="name">SECONDS</div>
+            </div>
+            <div class="zone">HI</div>
+        </div>
+    </main>
+    <script>
+        let hr = document.querySelector('.hr');
+        let mn = document.querySelector('.mn');
+        let sec = document.querySelector('.sec');
+        let timer = document.querySelector('.zone');
+        update();
+        setInterval(update,1000)
+        function update(){
+            let date = new Date();
+            let h = date.getHours();
+            let m = date.getMinutes();
+            let s = date.getSeconds();
+            hr.innerHTML = h<10?'0'+h:h;
+            mn.innerHTML = m<10?'0'+m:m;
+            sec.innerHTML = s<10?'0'+s:s;
+            if(h>11){
+                timer.innerHTML="PM";
+            }else{
+                timer.innerHTML="AM";
+            }
+        }
+    </script>
+</body>
+</html>
